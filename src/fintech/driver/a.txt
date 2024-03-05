@@ -1,0 +1,54 @@
+input: 
+create-account#Wiro Sableng#wirsab
+find-account#Milkyman
+create-account#Jaka Sembung#jaksem
+create-account#Milkyman#milky
+create-transaction#jaksem#15.0#2023/02/14 14:14:14#Weekly income
+create-transaction#jaksem#37.1#2023/02/15 15:15:15#Book refund
+create-transaction#jaksem#-8.4#2023/02/15 15:18:15#SIM credit
+create-transaction#milky#10.4#2023/02/15 21:10:00#Sputipi
+find-account#milky
+find-account#JAKSEM
+---
+
+      
+      
+output: 
+wirsab|Wiro Sableng|0.0
+jaksem|Jaka Sembung|0.0
+milky|Milkyman|0.0
+milky|Milkyman|10.4
+jaksem|Jaka Sembung|43.7
+
+wirsab|Wiro Sableng|0.0
+jaksem|Jaka Sembung|0.0
+milky|Milkyman|0.0
+milky|Milkyman|10.4
+jaksem|Jaka Sembung|43.7
+
+
+input: 
+create-account#Wiro Sableng#wirsab
+find-account#Milkyman
+create-account#Jaka Sembung#jaksem
+create-transaction#jaksem#15.0#2023/02/14 14:14:14#Weekly income
+create-transaction#jaksem#37.1#2023/02/15 15:15:15#Book refund
+create-transaction#jaksem#-8.4#2023/02/15 15:18:15#SIM credit
+find-account#JAKSEM
+create-transaction#congcong#-5.0#2023/02/16 10:15:41#Tax
+---
+,
+
+output: 
+wirsab|Wiro Sableng|0.0
+jaksem|Jaka Sembung|0.0
+jaksem|Jaka Sembung|43.7
+
+wirsab|Wiro Sableng|0.0
+jaksem|Jaka Sembung|0.0
+jaksem|Jaka Sembung|43.7
+
+
+create-transaction#congcong#-5.0#2023/02/16 10:15:41#Tax
+Exception in thread "main" java.lang.NullPointerException: Cannot invoke "fintech.model.Account.getBalance()" because the return value of "java.util.Map.get(Object)" is null
+        at fintech.driver.Driver3.main(Driver3.java:57)
